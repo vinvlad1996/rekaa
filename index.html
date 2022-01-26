@@ -111,25 +111,11 @@
           </script>
           <script>
             const burger = document.querySelector('.bg');
-        
-            const mobileMenu = document.querySelector('.menu-btn');
-
             burger.addEventListener('click', (e) => {
               e.preventDefault();
-
-              let pagePos = window.scrollY;
-              document.body.classList.add('is-menu-open');
-              document.setAttribute('data-scroll', pagePos);
-
+              document.body.classList.toggle('is-menu-open');
             });
-            
-            mobileMenu.forEach('click', el => {
-              el.addEventListener('click', (e) => {
-                e.preventDefault();
-                document.body.classList.remove('is-menu-open');
-              });
-            });
-          </script>
+            </script>
 
           <nav class="nav">
             <ul class="header-nav list-reset flex">
