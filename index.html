@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudioCORA</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link 
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap"
+      rel="stylesheet"
+    />
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" 
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="media.css" />
+  </head>
+  <body class="no-scroll">
+    <div class="container-main">
+      <header class="header">
+        <div class="container flex">
+          <div class="logo-phone">
+            <a href="tel:+78126459810" class="l-p">
+              <img src="IMG/phone.svg" alt="" width="20.04" height="20" />
+            </a>
+          </div>
+          <div class="logo"></div>
+          <div class="mobile flex">
+            <div class="bg">
+              <div class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="menu">
+                <div class="menu-bg-nav flex">
+                  <div class="logo-phone">
+                    <a href="tel:+78126459810" class="l-p">
+                      <img src="IMG/phone.svg" alt="" width="20.04" height="20" />
+                    </a>
+                  </div>
+                  <div class="logo2"></div>
+                </div>
+              <nav class="bg-nav">
+                <li class="bg-nav-item"><a href="#">О компании</a></li>
+                <li class="bg-nav-item"><a href="#">Архитектура</a></li>
+                <li class="bg-nav-item"><a href="#">Дизайн интерьера</a></li>
+                <li class="bg-nav-item"><a href="#">Галерея</a></li>
+                <li class="bg-nav-item"><a href="#">Сотрудничество</a></li>
+                <li class="bg-nav-item"><a href="#">Контакты</a></li>
+              </nav>
+              <div class="bg-contacts">
+                <h6 class="bg-contacts-parametr">Сакнкт-петербург, ул. зверинская 33, офис 13</h6>
+              </div>
+              <div class="bg-social-main">
+                <ul class="bg-social">
+                  <li class="bg-social-item">
+                    <a href="">
+                      <img src="IMG/facebook.svg" alt="" width="33" height="32">
+                    </a>
+                  </li>
+                  <li class="bg-social-item">
+                    <a href="">
+                      <img src="IMG/youtube.svg" alt="" width="33" height="32">
+                    </a>
+                  </li>
+                  <li class="bg-social-item">
+                    <a href="">
+                      <img src="IMG/instagram.svg" alt="" width="33" height="32">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <script>
+            let menuBtn = document.querySelector(".menu-btn");
+            let menu = document.querySelector(".menu");
+
+            menuBtn.addEventListener("click", function () {
+              menuBtn.classList.toggle("active");
+              menu.classList.toggle("active");
+            });
+
+          </script>
+          <script>
+            const burger = document.querySelector('.bg');
+        
+            const mobileMenu = document.querySelector('.menu-btn');
+
+            burger.addEventListener('click', (e) => {
+              e.preventDefault();
+
+              let pagePos = window.scrollY;
+              document.body.classList.add('is-menu-open');
+              document.setAttribute('data-scroll', pagePos);
+
+            });
+            
+            mobileMenu.forEach('click', el => {
+              el.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.body.classList.remove('is-menu-open');
+              });
+            });
+          </script>
+
+          <nav class="nav">
+            <ul class="header-nav list-reset flex">
+              <li class="header-nav-item">
+                <a href="#" class="header-nav-it"> О&nbsp;КОМПАНИИ </a>
+              </li>
+              <li class="header-nav-item">
+                <a href="#" class="header-nav-it"> АРХИТЕКТУРА </a>
+              </li>
+              <li class="header-nav-item">
+                <a href="#" class="header-nav-it"> ДИЗАЙН ИНТЕРЬЕРА </a>
+              </li>
+              <li class="header-nav-item">
+                <a href="#" class="header-nav-it"> ГАЛЕРЕЯ </a>
+              </li>
+              <li class="header-nav-item">
+                <a href="#" class="header-nav-it"> СОТРУДНИЧЕСТВО </a>
+              </li>
+              <li class="header-nav-item">
+                <a href="#" class="header-nav-it"> КОНТАКТЫ </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="phone">
+            <a href="tel:+78126459810" class="header-nav-ite">
+              +7 (812) 645 98 10
+            </a>
+          </div>
+        </div>
+      </header>
+      <main class="naming">
+        <div class="naming-font">
+          <h3 class="slogan">МЕНЯЕМ КАЧЕСТВО ЖИЗНИ</h3>
+          <h1 class="first-name">АРХИТЕКТУРА</h1>
+          <h1 class="second-name">ДИЗАЙН ИНТЕРЬЕРА</h1>
+        </div>
+      </main>
+    </div>
+    <div class="projects__container">
+      <div class="projects__name_indent">
+        <h4 class="projects__container_name">Проекты</h4>
+      </div>  
+      <div class="swiper">
+        <div id="main-slider" class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="IMG/11.jpg" alt="">
+            <div class="swiper-slide-flex">
+            <p class="swiper-slide__title">архитектура <span>300 м<sup>2</sup></span></p>
+            <h6 class="swiper-slide__subtitle">Вилла Валентина</h6>
+            </div>  
+          </div>
+          <div class="swiper-slide">
+            <img src="IMG/11.jpg" alt="">
+            <div class="swiper-slide-flex">
+            <p class="swiper-slide__title">архитектура <span>300 м<sup>2</sup></span></p>
+            <h6 class="swiper-slide__subtitle">Вилла Валентина</h6>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="IMG/11.jpg" alt="">
+            <div class="swiper-slide-flex">
+            <p class="swiper-slide__title">архитектура <span>300 м<sup>2</sup></span></p>
+            <h6 class="swiper-slide__subtitle">Вилла Валентина</h6>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev">
+          <img class="swiper-button" src="IMG/prev.svg" alt="">
+          <img class="swiper-button-new" src="IMG/prevwhite.svg" alt="">
+        </div>
+        <div class="swiper-button-next">
+          <img class="swiper-button" src="IMG/next.svg" alt="">
+          <img class="swiper-button-new2" src="IMG/prevwhite.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- <form action="">
+      <input type="text">
+      <input type="text">
+    </form> -->
+    <div class="contacts">
+      <div class="contacts_indent"></div>
+        <h4 class="contacts__container_name">контакты</h4>
+        <p class="contacts__subtitle">Оставьте заявку и мы вам перезвоним!</p>
+        <!-- <form action='' method='post'>
+          <div class="form flex"> 
+            <div class="form__indent">
+              <input class="input input__person" type="text" name='username' placeholder="Ваше имя" required></div>
+              <input class="input input__phone" type="text" name='phone' placeholder="Телефон" maxlength="11" required></div>
+              <div class="checkbox">
+                <input id="check" type="checkbox" class="check" checked>
+                <label for="check"><span class="icon"></span>Я даю согласие на обработку <a style="text-decoration:underline" href="">персональных данных</a></label>
+              </div>
+              <div class="button_indent">
+                <a class="contacts__button" href="#">оставить заявку</a>
+              </div>
+          </div>
+          </form> -->
+          <form action="" method="POST">
+            <div class="form">
+              <input class="input__person" type="text" name='username' placeholder="Ваше имя" required>
+              <input class="input__phone" type="text" name='phone' placeholder="Телефон" maxlength="11" required>
+            </div>
+            <div class="checkbox">
+              <input id="check" type="checkbox" class="check" checked>
+              <label for="check"><span class="icon"></span>Я даю согласие на обработку <a style="text-decoration:underline" href="">персональных данных</a></label>
+            </div>
+            <div class="button_indent">
+              <a class="contacts__button" href="#">оставить заявку</a>
+            </div>
+          </form>
+    
+    </div>
+
+    <footer class="footer">
+      <div class="footer__nav">
+        <div class="footer__nav_logo">
+          <img src="IMG/black.png" alt="">
+        </div>
+        <nav class="footer__nav_descr">
+          <ul class="footer__nav_item flex list-reset">
+            <li class="footer__nav_ite">
+              <a href="#"> О&nbsp;КОМПАНИИ </a>
+            </li>
+            <li class="footer__nav_ite">
+              <a href="#"> АРХИТЕКТУРА </a>
+            </li>
+            <li class="footer__nav_ite">
+              <a href="#"> ДИЗАЙН ИНТЕРЬЕРА </a>
+            </li>
+            <li class="footer__nav_ite">
+              <a href="#"> ГАЛЕРЕЯ </a>
+            </li>
+            <li class="footer__nav_ite">
+              <a href="#"> СОТРУДНИЧЕСТВО </a>
+            </li>
+            <li class="footer__nav_ite">
+              <a href="#"> КОНТАКТЫ </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+        <div class="line">
+        <img src="IMG/Line.svg" alt="">
+        </div>
+        <ul class="information list-reset">
+          <li class="information__item">2020, Studiokora</li>
+          <li class="information__item">
+            <a href="">Политика конфидециальности</a>
+          </li>
+          <li class="information__item item_first">
+            <a href="https://rekastudio.ru/" target="blank">REKA Digital Agency</a>
+          </li>
+        </ul>
+      </footer> 
+    <script src="./script.js"></script>
+  </body>
+</html>
